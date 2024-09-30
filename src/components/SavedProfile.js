@@ -35,32 +35,6 @@ export default function SavedProfile() {
           }
         })
         .catch((err) => {
-          if (err.status === 401) {
-            const response = {
-              success: true,
-              profile: {
-                user_uuid: "aa2a7a42-82a7-4350-b23f-57c74445964d",
-                email: "npm@gmail.com",
-                username: "jaytest",
-                display_name: "Jaytest",
-                location: "California, USA",
-                biography:
-                  "Hey there! I'm Jaytest, a passionate gamer with a love for all things competitive and immersive. From mastering FPS games to diving into RPG worlds, I’ve spent countless hours exploring different realms and leveling up my skills. Whether I’m playing solo or teaming up with friends, I thrive on strategy, fast reflexes, and the thrill of the game.",
-                avatar_uri:
-                  "https://img.freepik.com/free-vector/cute-girl-gaming-holding-joystick-cartoon-icon-illustration-people-technology-icon-concept-isolated-flat-cartoon-style_138676-2169.jpg?ga=GA1.1.1876678693.1727699364&semt=ais_hybrid",
-                banner_uri: "/images/content/profile/default_banner.png",
-                badge: "",
-                socials: null,
-                created_at: "2024-01-18T01:08:19+0000",
-              },
-            };
-
-            setProfile(response.profile);
-            localStorage.setItem(
-              "userProfile",
-              JSON.stringify(response.profile)
-            );
-          }
           console.log(err);
         });
     } else {
